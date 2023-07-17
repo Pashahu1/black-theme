@@ -13,6 +13,7 @@
   --bg-page: #f5f6fa;
   --color-header: #333a4a;
   --bg-header: #fff;
+  --btn--color: gray;
   color: var(--color-page);
   background-color: var(--bg-page);
 }
@@ -22,6 +23,7 @@
   --bg-page: #485268;
   --color-header: #fff;
   --bg-header: #333a4a;
+  --btn--color: #fff;
   color: var(--color-page);
   background-color: var(--bg-page);
 }
@@ -43,6 +45,51 @@
 
 .page--theme--dark--left::after {
   transform: translateX(100%);
+}
+
+.theme-btn {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 24px;
+  height: 2px;
+  background-color: var(--btn--color);
+}
+.theme-btn::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  width: 24px;
+  height: 2px;
+  background-color: var(--btn--color);
+}
+.theme-btn::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  width: 24px;
+  height: 2px;
+  background-color: var(--btn--color);
+}
+
+.active::before {
+  transform: rotate(-20deg);
+}
+.active::after {
+  transform: rotate(20deg);
+}
+
+.btn-menu {
+  height: 50%;
+  width: 50%;
+  background-color: pink;
+  z-index: 1;
+  transform: translateX(-100%);
+}
+
+.btn-menu--active {
+  transform: translateX(0);
 }
 
 /*# sourceMappingURL=style.css.map */

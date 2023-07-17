@@ -1,0 +1,12 @@
+.page--theme--dark {
+
+  --color-page: #f5f6fa;
+  --bg-page: #485268;
+  
+  --color-header: #fff;
+  --bg-header: #333a4a;
+  --btn--color: #fff;
+  
+  color: var(--color-page);
+  background-color: var(--bg-page);
+}

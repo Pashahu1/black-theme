@@ -1,0 +1,21 @@
+.theme-swither {
+  // height: 40px;
+  padding: 5px;
+  background-color: var(--color-header);
+  border-radius: 20px;
+
+  &::after {
+    display: block;
+    content: '';
+    padding-bottom: 50%;
+    width: 50%;
+    border-radius: 50%;
+    background-color: var(--bg-header);
+    transition: transform .3s;
+  }
+}
+
+.page--theme--dark--left::after {
+  transform: translateX(100%);
+}
+

@@ -1,0 +1,52 @@
+.theme-btn {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 24px;
+  height: 2px;
+  background-color: var(--btn--color);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    width: 24px;
+    height: 2px;
+    background-color: var(--btn--color);
+  } 
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    width: 24px;
+    height: 2px;
+    background-color: var(--btn--color);
+  }
+}
+
+.active {
+    // overflow: hidden;
+
+    &::before {
+      transform: rotate(-20deg);
+    } 
+  
+    &::after {
+      transform: rotate(20deg);
+    }
+  }
+
+
+.btn-menu {
+  height: 50%;
+  width: 50%;
+  background-color: pink;
+  z-index: 1;
+  transform: translateX(-100%);
+}
+
+.btn-menu--active {
+  transform: translateX(0);
+}

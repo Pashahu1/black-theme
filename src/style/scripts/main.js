@@ -27,21 +27,21 @@
 //   }
 // })
 
-const light = document.documentElement;
-const switcher = document.querySelector('.theme-swither');
-const themeName = document.querySelector('.theme-name')
+// const light = document.querySelector('.page');
+// const switcher = document.querySelector('.theme-swither');
+// const themeName = document.querySelector('.theme-name')
 
-switcher.addEventListener('click', () => {
-  if(light.classList.contains('page--theme--dark')) {
-    light.classList.remove('page--theme--dark');
-    switcher.classList.remove('page--theme--dark--left');
-    themeName.textContent = 'Theme: Light'
-  } else {
-    light.classList.add('page--theme--dark');
-    switcher.classList.add('page--theme--dark--left');
-    themeName.innerHTML = 'Theme:<strong> Dark</strong>'
-  }
-})
+// switcher.addEventListener('click', () => {
+//   if(light.classList.contains('page--theme--dark')) {
+//     light.classList.remove('page--theme--dark');
+//     switcher.classList.remove('page--theme--dark--left');
+//     themeName.textContent = 'Theme: Light'
+//   } else {
+//     light.classList.add('page--theme--dark');
+//     switcher.classList.add('page--theme--dark--left');
+//     themeName.innerHTML = 'Theme:<strong> Dark</strong>'
+//   }
+// })
 
 // themeName.innerHTML = 'Theme:<strong>dark</strong>' - inerHtml дозволяє зробити довільний html слово дарк буде жирным
 // themeName.textContent = 'Theme: light' - textContent дозіволяє додати текст
@@ -50,9 +50,61 @@ switcher.addEventListener('click', () => {
 
 
 
+// const page = document.querySelector('.page');
+// const switcher = document.querySelector('.theme-swither');
+// const themeName = document.querySelector('.theme-name');
+
+// page.addEventListener('click', () => {
+// if(page.classList.contains('page--theme--dark')) {
+//   page.classList.remove('page--theme--dark');
+//   switcher.classList.remove('page--theme--dark--left'); 
+//   } else {
+//     page.classList.add('page--theme--dark');
+//     switcher.classList.add('page--theme--dark--left'); 
+//   }
+// })
 
 
+// const page = document.querySelector('.page');
+// const swither = document.querySelector('.theme-swither');
+// const themeName = document.querySelector('.theme-name');
+// const themeNumber = document.querySelector('.theme-number');
 
+// swither.addEventListener('click', () => {
+//   if(page.classList.contains('page--theme--dark')) {
+//     page.classList.remove('page--theme--dark');
+//     swither.classList.remove('page--theme--dark--left');
+//     themeName.textContent = 'Theme: light';
+//     themeNumber.textContent = '185873';
+//   } else {
+//     page.classList.add('page--theme--dark');
+//     swither.classList.add('page--theme--dark--left');
+//     themeName.textContent = 'Theme: Dark';
+//     themeNumber.textContent = '190000';
+//   }
+// });
 
+const page = document.querySelector('.page');
+const swither = document.querySelector('.theme-swither');
+const burger = document.querySelector('.theme-btn');
+const burgerMenue = document.querySelector('.btn-menu');
 
+swither.addEventListener('click', () => {
+  if(page.classList.contains('page--theme--dark')) {
+    page.classList.remove('page--theme--dark');
+    swither.classList.remove('page--theme--dark--left');
+  } else {
+    page.classList.add('page--theme--dark');
+    swither.classList.add('page--theme--dark--left');
+  }
+});
 
+burger.addEventListener('click', () => {
+  if(burger.classList.contains('active')) {
+    burger.classList.remove('active');
+    burgerMenue.classList.remove('btn-menu--active');
+  } else {
+    burger.classList.add('active');
+    burgerMenue.classList.add('btn-menu--active');
+  }
+})
